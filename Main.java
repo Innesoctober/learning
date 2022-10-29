@@ -1,9 +1,15 @@
-import java.util.Scanner;
-
 public class Main {
+    public static void print(int number, int rows) {
+        for (int j = 0; j < rows; j++) {
+            for (int i = 0; i <= j; i++) {
+                System.out.print(number + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
-//        Scanner sc = new Scanner(System.in);
-//        int x = sc.nextInt();
+
+        print(5, 4);
     }
 }

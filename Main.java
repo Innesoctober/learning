@@ -1,6 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
+/*Вывести сумму всех положительных элементов массива*/
 public class Main {
     public static void printArray(double[] array) {
 
@@ -35,6 +36,18 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите желаемую длину массива");
+        int length = scanner.nextInt();
+        System.out.println("Введите " + length + " чисел");
+        double[] array = scanArray(length);
+        double sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] >= 0) {
+                sum = sum + array[i];
+            }
+        }
+        System.out.println("Cумма всех неотрицательных элементов массива: " + sum);
     }
 }
+
